@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6358AB4258CDD8F0002B592 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6358AB3258CDD8F0002B592 /* OrderManager.swift */; };
+		B6358AB7258CE2620002B592 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6358AB6258CE2620002B592 /* Place.swift */; };
+		B6358ABA258CF4B90002B592 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6358AB9258CF4B90002B592 /* PlacesViewController.swift */; };
+		B6358ABE258D4BE80002B592 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6358ABD258D4BE80002B592 /* QRViewController.swift */; };
 		B6798F0A2533469F00028CA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6798F092533469F00028CA6 /* AppDelegate.swift */; };
 		B6798F0C2533469F00028CA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6798F0B2533469F00028CA6 /* SceneDelegate.swift */; };
 		B6798F0E2533469F00028CA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6798F0D2533469F00028CA6 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6358AB3258CDD8F0002B592 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		B6358AB6258CE2620002B592 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		B6358AB9258CF4B90002B592 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		B6358ABD258D4BE80002B592 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		B6798F062533469F00028CA6 /* TablesBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TablesBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6798F092533469F00028CA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6798F0B2533469F00028CA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				B6798F12253346A100028CA6 /* Assets.xcassets */,
 				B6798F14253346A100028CA6 /* LaunchScreen.storyboard */,
 				B6798F17253346A100028CA6 /* Info.plist */,
+				B6358AB3258CDD8F0002B592 /* OrderManager.swift */,
+				B6358AB6258CE2620002B592 /* Place.swift */,
+				B6358AB9258CF4B90002B592 /* PlacesViewController.swift */,
+				B6358ABD258D4BE80002B592 /* QRViewController.swift */,
 			);
 			path = TablesBooking;
 			sourceTree = "<group>";
@@ -137,9 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6358ABA258CF4B90002B592 /* PlacesViewController.swift in Sources */,
+				B6358AB4258CDD8F0002B592 /* OrderManager.swift in Sources */,
 				B6798F0E2533469F00028CA6 /* ViewController.swift in Sources */,
+				B6358ABE258D4BE80002B592 /* QRViewController.swift in Sources */,
 				B6798F0A2533469F00028CA6 /* AppDelegate.swift in Sources */,
 				B6798F0C2533469F00028CA6 /* SceneDelegate.swift in Sources */,
+				B6358AB7258CE2620002B592 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

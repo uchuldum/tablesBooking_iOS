@@ -8,20 +8,11 @@
 import UIKit
 
 class StartViewController: UIViewController {
-
-    @IBOutlet weak var dayTextField: UITextField!
-    @IBOutlet weak var timeTextField: UITextField!
     
-    private var dayPicker: UIDatePicker?
-    private var timePicker: UIDatePicker?
-    
-    private var selectedDate = Date()
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dayTextField.delegate = self
-        timeTextField.delegate = self
-        // Do any additional setup after loading the view.
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -29,19 +20,18 @@ class StartViewController: UIViewController {
         
     }
     
-    @IBAction func selectDay(_ sender: Any) {
-        
-    }
-    
-    @IBAction func selectTime(_ sender: Any) {
-        
-    }
-    
     @IBAction func goButtonAction(_ sender: Any) {
-        
+        if OrderManager.shared.selectedDate != nil {
+            performSegue(withIdentifier: "showPlaces",
+                         sender: self)
+        }
     }
 }
 
-extension StartViewController: UITextFieldDelegate {
+private extension StartViewController {
+    
+    @IBAction func selectDate(_ sender: UIDatePicker) {
+        OrderManager.shared.selectedDate = sender.date
+    }
 }
 
