@@ -24,6 +24,16 @@ class StartViewController: UIViewController {
         if OrderManager.shared.selectedDate != nil {
             performSegue(withIdentifier: "showPlaces",
                          sender: self)
+        } else {
+            let alert = UIAlertController(title: "Дата не выбрана",
+                                          message: "Выберите дату",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Продолжить",
+                                          style: .default,
+                                          handler: nil))
+            self.present(alert,
+                         animated: true,
+                         completion: nil)
         }
     }
 }
@@ -31,7 +41,8 @@ class StartViewController: UIViewController {
 private extension StartViewController {
     
     @IBAction func selectDate(_ sender: UIDatePicker) {
-        OrderManager.shared.selectedDate = sender.date
+        let date = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: sender.date)
+        OrderManager.shared.selectedDate = date
     }
 }
 

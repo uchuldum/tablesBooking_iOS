@@ -28,7 +28,7 @@ class OrderManager {
     private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .full
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZ"
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
         return formatter
     }
     

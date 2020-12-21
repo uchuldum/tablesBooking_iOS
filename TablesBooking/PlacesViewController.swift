@@ -10,9 +10,21 @@ import UIKit
 
 class PlacesViewController: UIViewController {
     
-    @IBOutlet var placeButtons: [UIButton]!
+    @IBOutlet private var placeButtons: [UIButton]!
+    @IBOutlet private weak var loaderIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var bookButton: UIButton!
     
     private var placeName = ""
+    
+    private var bookedAlert: UIAlertController {
+        let alertVC = UIAlertController(title: "Место забронировано",
+                                        message: "На выбранную дату данное место забронировано",
+                                        preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK",
+                                        style: .default,
+                                        handler: nil))
+        return alertVC
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +43,21 @@ class PlacesViewController: UIViewController {
     }
     
     @IBAction private func bookPlace() {
+        loaderIndicator.isHidden = false
+        bookButton.isHidden = true
+        loaderIndicator.startAnimating()
         OrderManager.shared.makeOrder(for: placeName) { [weak self] status in
             DispatchQueue.main.async {
+                self?.loaderIndicator.stopAnimating()
+                self?.bookButton.isHidden = false
                 switch status {
                 case .booked:
                     print("this place booked")
+                    if let alert = self?.bookedAlert {
+                        self?.present(alert,
+                                      animated: true,
+                                      completion: nil)
+                    }
                 case .succeed:
                     self?.performSegue(withIdentifier: "showQR", sender: self)
                 case .error:
