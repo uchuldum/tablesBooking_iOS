@@ -20,10 +20,10 @@ class OrderManager {
     private init() {
         fetchPlaces()
     }
-    
-    private let getPlacesURL = URL(string: "https://bookingmvp.herokuapp.com/api/places")
-    private let checkIfBookedURL = URL(string: "https://bookingmvp.herokuapp.com/api/orders/check")
-    private let createOrderURL = URL(string: "https://bookingmvp.herokuapp.com/api/orders/create")
+    ///Put your own URL here
+    private let getPlacesURL = URL(string: "https://------/api/places")
+    private let checkIfBookedURL = URL(string: "https://------/api/orders/check")
+    private let createOrderURL = URL(string: "https://-------/api/orders/create")
     
     private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
