@@ -63,6 +63,7 @@ class PlacesViewController: UIViewController {
                 case .error:
                     print("error")
                 }
+                // не должно быть default?
             }
         }
     }
