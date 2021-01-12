@@ -33,9 +33,8 @@ class QRViewController: UIViewController {
                     return UIImage(ciImage: output)
                 }
             }
-        } else {
-            return nil
-        }
+        } 
+        
         return nil
     }
         
